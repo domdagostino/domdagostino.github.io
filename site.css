@@ -260,7 +260,9 @@ a:hover {
   .mobile-links {
     margin-top: 50px;
   }
-  
+  .bg {
+	  display:none;
+  }
 }
 
 @media screen and (max-width: 630px) {

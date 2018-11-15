@@ -1,0 +1,70 @@
+<html>
+
+	<head>
+		<title>Dom D'Agostino</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="site.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	</head>
+		
+	<body>
+
+		<div class="details">
+		  <h1>dom®</h1>
+			<p>lover of sushi 🍣, marvel movies, & one of the members of daft punk.</p>
+			<p>web developer by day, masked crime fighter by night.</p>
+		</div>
+
+		<div class="links">
+		  <a class="top" href="#" target="_blank">hi 🖐🏻</a>
+		  <a class="left" href="http://twitter.com/domdagostino" target="_blank">twitter - @domdagostino</a>
+		  <a class="right" href="https://github.com/domdagostino" target="_blank">github – @domdagostino</a>
+		  <a class="bottom" href="mailto:dominickjdagostino@gmail.com">dominickjdagostino@gmail.com</a>
+		</div>
+
+		<div class="mobile">
+		  <div class="mobile-details">
+		  	<h1>dom®</h1>
+			<p>lover of sushi 🍣, marvel movies, & one of the members of daft punk.</p>
+			<p>web developer by day, masked crime fighter by night.</p>
+		  </div>
+		  <div class="mobile-links">
+		      <a class="top" href="#" target="_blank">hi 🖐🏻</a>
+			  <a class="left" href="http://twitter.com/domdagostino" target="_blank">twitter - @domdagostino</a>
+			  <a class="right" href="https://github.com/domdagostino" target="_blank">github – @domdagostino</a>
+			  <a class="bottom" href="mailto:dominickjdagostino@gmail.com">dominickjdagostino@gmail.com</a>
+		  </div>
+		</div>
+
+		<img src="bg.jpg" class="bg" />
+	</body>
+
+	<script>
+		$(document).ready(function() {  
+		    $('img').load(function() {  
+		        $(this).fadeIn(800);  
+		    });  
+		});  
+
+		var width = 0,
+			height = 0,
+		    rgb = [],
+		    getWidth = function() {
+		        width = $(window).width();
+		        height= $(window).height();
+		    };
+
+		$(window).resize(getWidth).mousemove(function(e) {
+		    rgb = [
+		        Math.round(e.pageX/width * 255),
+		        Math.round(e.pageY/height * 255),
+		        170
+		    ];
+		    
+		    $(document.body).css('background-color','rgb('+rgb.join(',')+')');
+		    
+		}).resize();
+	</script>
+
+</html>

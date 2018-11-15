@@ -126,8 +126,13 @@ input, textarea, select {
 }
 
 
+html {
+  overflow:hidden;
+}
+
 body {
-	background-color: black;
+  overflow:hidden;
+  background-color: black;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   overflow: hidden;

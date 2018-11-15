@@ -254,9 +254,6 @@ a:hover {
     margin-top: 50px;
   }
   
-  .bg {
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 630px) {

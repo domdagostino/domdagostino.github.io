@@ -2,7 +2,7 @@
 
 	<head>
 		<title>Dom D'Agostino</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="site.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -43,7 +43,11 @@
 	<script>
 		var width = 0,
 		height = 0,
-	    rgb = [],
+	    rgb = [
+	    	Math.floor(Math.random() * 255) + 1,
+	    	Math.floor(Math.random() * 255) + 1,
+	    	170
+	    ],
 	    getWidth = function() {
 	        width = $(window).width();
 	        height= $(window).height();
@@ -53,6 +57,7 @@
 
 		function startup() {
 		  var el = document.getElementsByTagName("BODY")[0];
+		  $(document.body).css('background-color','rgb('+rgb.join(',')+')');    
 		  el.addEventListener("touchmove", handleMove, false);
 		}
 

@@ -74,16 +74,6 @@
 		        $(this).fadeIn(800);  
 		    });  
 		});  
-
-		$(window).resize(getWidth).mousemove(function(e) {
-		    rgb = [
-		        Math.round(e.pageX/width * 255),
-		        Math.round(e.pageY/height * 255),
-		        170
-		    ];
-		    
-		    $(document.body).css('background-color','rgb('+rgb.join(',')+')');    
-		}).resize();
 	</script>
 
 </html>
